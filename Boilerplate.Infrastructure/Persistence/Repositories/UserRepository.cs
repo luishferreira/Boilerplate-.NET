@@ -6,17 +6,17 @@ namespace Boilerplate.Infrastructure.Persistence.Repositories
 {
     public class UserRepository(AppDbContext context) : IUserRepository
     {
-        public async Task<User?> GetById(int id)
+        public async Task<User?> GetByIdAsync(int id)
         {
             return await context.Usuarios.FindAsync(id);
         }
 
-        public async Task Add(User user)
+        public async Task AddAsync(User user)
         {
             await context.Usuarios.AddAsync(user);
         }
 
-        public async Task<bool> UsernameExists(string username)
+        public async Task<bool> UsernameExistsAsync(string username)
         {
             return await context.Usuarios.AnyAsync(u => u.Username == username);
         }

@@ -17,7 +17,7 @@ namespace Boilerplate.Application.Features.Users.Create
                 .MaximumLength(150).WithMessage("O nome não pode exceder 150 caracteres.")
                 .MustAsync(async (username, cancellationToken) =>
                 {
-                    return !await userRepository.UsernameExists(username);
+                    return !await userRepository.UsernameExistsAsync(username);
                 })
                 .WithMessage("Este nome já está a ser utilizado.");
 

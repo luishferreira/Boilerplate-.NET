@@ -18,7 +18,7 @@ namespace Boilerplate.Application.Features.Users.Create
 
             user.PasswordHash = GeneratePasswordHash(command.Password);
 
-            await userRepository.Add(user);
+            await userRepository.AddAsync(user);
 
             await unitOfWork.SaveChangesAsync(cancellationToken);
 
