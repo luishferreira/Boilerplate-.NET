@@ -15,9 +15,9 @@ namespace Boilerplate.Application.Features.Users.Create
             RuleFor(x => x.Username)
                 .NotEmpty().WithMessage("O nome é obrigatório.")
                 .MaximumLength(150).WithMessage("O nome não pode exceder 150 caracteres.")
-                .MustAsync(async (email, cancellationToken) =>
+                .MustAsync(async (username, cancellationToken) =>
                 {
-                    return !await userRepository.UsernameExists(email);
+                    return !await userRepository.UsernameExists(username);
                 })
                 .WithMessage("Este nome já está a ser utilizado.");
 

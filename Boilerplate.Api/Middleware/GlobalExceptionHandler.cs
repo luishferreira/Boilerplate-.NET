@@ -13,14 +13,14 @@ public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger, IHos
         logger.LogError(exception,
             "Exception occurred: {Message}", exception.Message);
 
+        if (exception is ValidationException validationException)
+        {
+            await HandleValidationExceptionAsync(httpContext, validationException, cancellationToken);
+            return true;
+        }
+
         var (statusCode, title, detail) = exception switch
         {
-            ValidationException validationEx => (
-                StatusCodes.Status400BadRequest,
-                "Validation Error",
-                string.Join("; ", validationEx.Errors
-                    .Select(e => e.ErrorMessage))
-            ),
             ArgumentException => (
                 StatusCodes.Status400BadRequest,
                 "Bad Request",
@@ -59,5 +59,25 @@ public class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger, IHos
             problemDetails, cancellationToken);
 
         return true;
+    }
+
+    private static async Task HandleValidationExceptionAsync(
+        HttpContext httpContext,
+        ValidationException exception,
+        CancellationToken cancellationToken)
+    {
+        var errors = exception.Errors
+            .GroupBy(e => e.PropertyName, e => e.ErrorMessage)
+            .ToDictionary(failureGroup => failureGroup.Key, failureGroup => failureGroup.ToArray());
+
+        var problemDetails = new ValidationProblemDetails(errors)
+        {
+            Status = StatusCodes.Status400BadRequest,
+            Title = "Validation Error",
+            Type = "https://httpstatuses.io/400"
+        };
+
+        httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
+        await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken);
     }
 }

@@ -9,7 +9,7 @@ Accept: application/json
 POST {{Boilerplate_HostAddress}}/users
 Content-Type: application/json
 {
-  "username": "newuser2",
-  "password": "securepassword",
+  "username": "",
+  "password": "",
   "confirmpassword": "securepassword"
 }
