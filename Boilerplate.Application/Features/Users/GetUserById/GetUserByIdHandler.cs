@@ -11,9 +11,9 @@ namespace Boilerplate.Application.Features.Users.GetUserById
     {
         public async Task<UserResponse> Handle(GetUserByIdQuery query, CancellationToken cancellationToken)
         {
-            var usuario = await userRepository.GetByIdAsync(query.Id) ?? throw new KeyNotFoundException($"{nameof(User)} not found");
+            var user = await userRepository.GetByIdAsync(query.Id) ?? throw new KeyNotFoundException($"{nameof(User)} not found");
 
-            var response = mapper.Map<UserResponse>(usuario);
+            var response = mapper.Map<UserResponse>(user);
 
             return response;
         }

@@ -8,7 +8,7 @@ namespace Boilerplate.Infrastructure.Persistence;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options), IUnitOfWork
 {
-    public DbSet<User> Usuarios { get; set; }
+    public DbSet<User> Users { get; set; }
 
     public async Task<IDatabaseTransaction> BeginTransactionAsync(CancellationToken ct = default)
     {

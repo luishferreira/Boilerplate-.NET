@@ -8,17 +8,17 @@ namespace Boilerplate.Infrastructure.Persistence.Repositories
     {
         public async Task<User?> GetByIdAsync(int id)
         {
-            return await context.Usuarios.FindAsync(id);
+            return await context.Users.FindAsync(id);
         }
 
         public async Task AddAsync(User user)
         {
-            await context.Usuarios.AddAsync(user);
+            await context.Users.AddAsync(user);
         }
 
         public async Task<bool> UsernameExistsAsync(string username)
         {
-            return await context.Usuarios.AnyAsync(u => u.Username == username);
+            return await context.Users.AnyAsync(u => u.Username == username);
         }
     }
 }
