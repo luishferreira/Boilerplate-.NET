@@ -13,7 +13,7 @@ namespace Boilerplate.Application.Features.Users.GetUserById
         {
             RuleFor(x => x.Id)
                 .GreaterThan(0)
-                .WithMessage("O ID do utilizador deve ser um número positivo.");
+                .WithMessage("O Id do utilizador deve ser um número positivo.");
         }
     }
 }
