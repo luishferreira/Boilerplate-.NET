@@ -8,3 +8,5 @@ Tem apenas uma Command e uma Query de exemplos, utilizando as melhores e mais at
 Estamos utilizando EF Core para persistência de dados, com IAuditable para salvar dados de auditoria automatico.
 
 Tratamento de exceçoes moderno com IExceptionHandler
+
+Testes unitários utilizando xUnit, NSubstitute para mockar dados, FluentAssertion para fazer os asserts mais legiveis e Bogus para criar dados fake sem serem manuais.
