@@ -1,6 +1,6 @@
-# Boilerplate .NET 9
+# Boilerplate .NET 10
 
-Boilerplate profissional para .NET 9, construído com foco em arquitetura limpa, escalabilidade e nas melhores práticas do mercado.
+Boilerplate profissional para .NET 10, construído com foco em arquitetura limpa, escalabilidade e nas melhores práticas do mercado.
 
 O objetivo deste projeto é fornecer uma base completa para aplicações .NET, permitindo que eu comece a trabalhar nas features e regras de negócio imediatamente.
 
