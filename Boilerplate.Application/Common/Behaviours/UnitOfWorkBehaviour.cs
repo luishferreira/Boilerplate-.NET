@@ -1,6 +1,6 @@
-﻿using MediatR;
-using Boilerplate.Application.Common.Interfaces;
+﻿using Boilerplate.Application.Common.Interfaces;
 using Boilerplate.Domain.Interfaces;
+using MediatR;
 
 namespace Boilerplate.Application.Common.Behaviours;
 

@@ -1,9 +1,5 @@
-﻿using Bogus;
-using Boilerplate.Application.Features.Users.Create;
-using Boilerplate.Application.Features.Users.GetUserById;
-using Boilerplate.Domain.Interfaces;
+﻿using Boilerplate.Application.Features.Users.GetUserById;
 using FluentAssertions;
-using NSubstitute;
 
 namespace Boilerplate.Application.Tests.Unit.Features.Users.GetUserById
 {

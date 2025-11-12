@@ -1,7 +1,7 @@
-﻿using Boilerplate.Application.Features.Users;
+﻿using AutoMapper;
+using Boilerplate.Application.Features.Users;
 using Boilerplate.Application.Features.Users.Create;
 using Boilerplate.Domain.Entities;
-using AutoMapper;
 
 namespace Boilerplate.Application.Mappings
 {

@@ -5,7 +5,6 @@ using Boilerplate.Application.Mappings;
 using Boilerplate.Domain.Entities;
 using Boilerplate.Domain.Interfaces;
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using NSubstitute;
 using System.Security.Cryptography;
@@ -65,7 +64,7 @@ namespace Boilerplate.Application.Tests.Unit.Features.Users.Create
 
                 return Task.CompletedTask;
             });
-                
+
             _unitOfWorkMock.SaveChangesAsync(CancellationToken.None).Returns(Task.FromResult(1));
 
             // Act

@@ -1,6 +1,6 @@
-﻿using Boilerplate.Domain.Entities;
+﻿using AutoMapper;
+using Boilerplate.Domain.Entities;
 using Boilerplate.Domain.Interfaces;
-using AutoMapper;
 using MediatR;
 
 namespace Boilerplate.Application.Features.Users.Create
