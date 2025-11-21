@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Api", "Boilerplate.Api\Boilerplate.Api.csproj", "{C3A4A0D3-0511-4F79-9224-403DBABB2D6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Api", "src\Boilerplate.Api\Boilerplate.Api.csproj", "{C3A4A0D3-0511-4F79-9224-403DBABB2D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Domain", "Boilerplate.Domain\Boilerplate.Domain.csproj", "{461825C2-DB44-4360-A105-003D41487E97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Domain", "src\Boilerplate.Domain\Boilerplate.Domain.csproj", "{461825C2-DB44-4360-A105-003D41487E97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Application", "Boilerplate.Application\Boilerplate.Application.csproj", "{9ED85C7B-B63E-4A25-9524-8DBC3D13F16A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Application", "src\Boilerplate.Application\Boilerplate.Application.csproj", "{9ED85C7B-B63E-4A25-9524-8DBC3D13F16A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Infrastructure", "Boilerplate.Infrastructure\Boilerplate.Infrastructure.csproj", "{738D8741-41DE-4844-9F73-F9D5E689AFAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Infrastructure", "src\Boilerplate.Infrastructure\Boilerplate.Infrastructure.csproj", "{738D8741-41DE-4844-9F73-F9D5E689AFAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Application.Tests.Unit", "Boilerplate.Application.Tests.Unit\Boilerplate.Application.Tests.Unit.csproj", "{0D91975C-AF54-4BCE-AF6E-820A88064B49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Application.Tests.Unit", "tests\Boilerplate.Application.Tests.Unit\Boilerplate.Application.Tests.Unit.csproj", "{0D91975C-AF54-4BCE-AF6E-820A88064B49}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{0D91975C-AF54-4BCE-AF6E-820A88064B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D91975C-AF54-4BCE-AF6E-820A88064B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D91975C-AF54-4BCE-AF6E-820A88064B49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

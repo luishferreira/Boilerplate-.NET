@@ -35,7 +35,6 @@ namespace Boilerplate.Application.Tests.Unit.Features.Users.Create
             _commandFaker = new Faker();
         }
 
-        // Needed to set the Id property which has an init-only setter
         private static void SetEntityId(BaseEntity entity, int id)
         {
             var idProperty = typeof(BaseEntity).GetProperty("Id")!;

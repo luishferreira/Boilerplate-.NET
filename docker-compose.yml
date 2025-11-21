@@ -1,0 +1,21 @@
+services:
+  boilerplate.api:
+    image: ${DOCKER_REGISTRY-}boilerplateapi
+    build:
+      context: .
+      dockerfile: src/Boilerplate.Api/Dockerfile
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_db
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=boilerplate!123
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    restart: always
+
+volumes:
+  sql_data:
